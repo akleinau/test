@@ -1,13 +1,18 @@
 name: Add GitHub issues that are getting discussed to the "in discussion" tab of the "Issues" project
 on: [issue_comment]
 jobs:
-  github-actions-automate-projects:
+  print comment count:
     runs-on: ubuntu-latest
     steps:
-    - name: add-new-issues-to-repository-based-project-column
+    - name: load infos
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_PROJECT_URL: https://github.com/test/projects/1
         GITHUB_PROJECT_COLUMN_NAME: In discussion
+        info: GET /repos/akleinau/test/issues/1/comments
+       run: |
+        echo $info.
+   
+
    
