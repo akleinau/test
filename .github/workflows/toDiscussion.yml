@@ -1,7 +1,7 @@
 name: Add GitHub issues that are getting discussed to the "in discussion" tab of the "Issues" project
 on: [issue_comment]
 jobs:
-  print comment count:
+  printCommentCount:
     runs-on: ubuntu-latest
     steps:
     - name: load infos
