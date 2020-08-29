@@ -10,9 +10,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_PROJECT_URL: https://github.com/test/projects/1
         GITHUB_PROJECT_COLUMN_NAME: In discussion
-        info: GET /repos/akleinau/test/issues/1/comments
-       run: |
-        echo $info.
+        info: GET /repos/akleinau/test/issues/1/comments 
+       run: echo $info.
    
 
    
